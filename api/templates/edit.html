@@ -1,0 +1,37 @@
+<form method="post">
+    {% csrf_token %}
+
+    <label>Patient Name</label>
+    <input type="text"
+           class="form-control"
+           name="patient_name"
+           value="{{ data.patient_name }}">
+
+    <br>
+
+    <label>Patient Number</label>
+    <input type="number"
+           class="form-control"
+           name="patient_number"
+           value="{{ data.patient_number }}">
+
+    <br>
+
+    <label>Patient Issue</label>
+    <input type="text"
+           class="form-control"
+           name="patient_issue"
+           value="{{ data.patient_issue }}">
+
+    <br>
+
+    <label>Appointment Date</label>
+    <input type="date"
+           class="form-control"
+           name="appointment_date"
+           value="{{ data.appointment_date|date:'Y-m-d' }}">
+
+    <br>
+
+    <button class="btn btn-success">Update</button>
+</form>
